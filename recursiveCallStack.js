@@ -7,8 +7,8 @@ it eventually escapes the gravitational pull and causes stackoverflow. Or, stack
 */
 
 const decimalToBinary = (input) => {
-  if (input === 0) {
-    return "";
+  if (input === 0 || input === 1) {
+    return String(input);
   } else {
     return decimalToBinary(Math.floor(input / 2)) + (input % 2);
   }
